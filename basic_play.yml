@@ -1,0 +1,5 @@
+- hosts: all
+  become: true
+  tasks:
+  - name: Create Docker container
+    shell: docker run -d --name ansible_conatiner -p 8090:8080 cloudtraineer/project_image
